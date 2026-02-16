@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(120deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+
+.badge {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.95;
+}
+
+.container {
+  max-width: 1100px;
+  margin: -1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.two-cols {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(17, 24, 39, 0.06);
+}
+
+h2 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button.ghost {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+button.ghost:hover {
+  background: #e0e7ff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fcfdff;
+}
+
+.item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.meta {
+  margin: 0.3rem 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.item p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 1rem;
+  font-size: 0.85rem;
+}

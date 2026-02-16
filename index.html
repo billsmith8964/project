@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalentBridge - 企业任务与人才简历平台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="badge">Upwork 风格 MVP</p>
+        <h1>TalentBridge</h1>
+        <p class="subtitle">企业发布任务，个人上传简历，快速完成需求与人才匹配。</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid two-cols">
+        <article class="card">
+          <h2>企业发布任务</h2>
+          <form id="jobForm" class="form">
+            <label>
+              任务标题
+              <input name="title" required maxlength="80" placeholder="例如：开发官网落地页" />
+            </label>
+            <label>
+              预算（人民币）
+              <input name="budget" type="number" min="0" required placeholder="例如：5000" />
+            </label>
+            <label>
+              技能要求
+              <input name="skills" required placeholder="例如：React, UI 设计, SEO" />
+            </label>
+            <label>
+              任务描述
+              <textarea name="description" required rows="4" placeholder="描述项目背景、交付时间和验收标准"></textarea>
+            </label>
+            <button type="submit">发布任务</button>
+          </form>
+        </article>
+
+        <article class="card">
+          <h2>个人上传简历</h2>
+          <form id="resumeForm" class="form">
+            <label>
+              姓名
+              <input name="name" required maxlength="40" placeholder="你的姓名" />
+            </label>
+            <label>
+              职位方向
+              <input name="role" required placeholder="例如：前端开发工程师" />
+            </label>
+            <label>
+              核心技能
+              <input name="skills" required placeholder="例如：Vue, TypeScript, Node.js" />
+            </label>
+            <label>
+              个人简介
+              <textarea name="summary" required rows="4" placeholder="简要介绍项目经验与优势"></textarea>
+            </label>
+            <button type="submit">上传简历</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="grid two-cols">
+        <article class="card">
+          <div class="section-header">
+            <h2>最新任务</h2>
+            <button id="clearJobs" class="ghost">清空任务</button>
+          </div>
+          <div id="jobList" class="list"></div>
+        </article>
+
+        <article class="card">
+          <div class="section-header">
+            <h2>人才简历</h2>
+            <button id="clearResumes" class="ghost">清空简历</button>
+          </div>
+          <div id="resumeList" class="list"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">MVP 示例，仅用于功能演示。</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
